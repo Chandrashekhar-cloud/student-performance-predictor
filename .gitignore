@@ -1,0 +1,70 @@
+# ==============================================================================
+# Node.js / React / Vite Frontend Ignores
+# ==============================================================================
+node_modules/
+dist/
+dist-ssr/
+.output/
+.vercel/
+.wrangler/
+.tanstack/**
+.nitro/
+.vinxi/
+.lovable/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Local environment variables
+.env
+.env.local
+.env.*.local
+*.local
+.dev.vars
+
+# ==============================================================================
+# Python / Flask Backend Ignores
+# ==============================================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+eggs/
+.eggs/
+parts/
+var/
+sdist/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
+venv/
+.venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+
+# ==============================================================================
+# Editor & OS Artifacts
+# ==============================================================================
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
