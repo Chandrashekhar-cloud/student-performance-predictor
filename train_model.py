@@ -88,7 +88,7 @@ def main():
     mae = mean_absolute_error(y_test, y_pred)
     r2 = r2_score(y_test, y_pred)
 
-    print("\n[Step 5] Evaluation Metrics on Test Set (20 records):")
+    print(f"\n[Step 5] Evaluation Metrics on Test Set ({len(X_test)} records):")
     print(f"-> Mean Absolute Error (MAE) : {mae:.2f} marks (average prediction error)")
     print(f"-> R-squared Score (R²)      : {r2:.4f} ({r2 * 100:.1f}% variance explained)")
 

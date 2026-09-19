@@ -7,10 +7,10 @@ import {
   HeadContent,
   Scripts,
 } from "@tanstack/react-router";
-import { useEffect, type ReactNode } from "react";
+import { type ReactNode } from "react";
 import appCss from "../styles.css?url";
-
-
+import { AuthProvider } from "../context/AuthContext";
+import { Toaster } from "../components/ui/sonner";
 
 function NotFoundComponent() {
   return (
@@ -74,8 +74,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Student Performance Prediction System" },
-      { name: "description", content: "Predict student academic performance using machine learning." },
+      { title: "Student Performance Prediction System | Figma-Grade ML Analytics" },
+      { name: "description", content: "Predict and improve student academic performance using machine learning regression models." },
       { name: "author", content: "Student Performance Prediction System" },
       { property: "og:title", content: "Student Performance Prediction System" },
       { property: "og:description", content: "Predict student academic performance using machine learning." },
@@ -83,6 +83,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap",
+      },
       {
         rel: "stylesheet",
         href: appCss,
@@ -115,8 +121,11 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-      <Outlet />
+      <AuthProvider>
+        <Outlet />
+        <Toaster />
+      </AuthProvider>
     </QueryClientProvider>
   );
 }
+

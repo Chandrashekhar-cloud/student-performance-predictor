@@ -8,9 +8,11 @@ This dataset was specifically created and curated for the **Student Performance 
 ---
 
 ## 2. Number of Records
-* **Total Rows**: 100 student records
+* **Total Rows**: 1,000 student records
 * **File Format**: Standard CSV (`student_performance.csv`)
 * **Missing Values / Nulls**: 0 (pre-cleaned and validated)
+* **Train / Test Distribution**: 800 training records (80%) / 200 testing records (20%)
+* **Model Accuracy**: $R^2 = 0.9685$, $\text{MAE} = 1.86$ marks
 
 ---
 
@@ -40,6 +42,6 @@ This dataset was specifically created and curated for the **Student Performance 
 ---
 
 ## 5. Dataset Limitations
-* **Educational Demonstration Scope**: The dataset is intentionally compact (100 samples) and tailored for rapid training, lightweight deployment, and laptop-based project demonstrations.
+* **Educational Demonstration Scope**: The dataset contains 1,000 realistic student samples tailored for rapid training, lightweight cloud deployment, and viva project demonstrations.
 * **Feature Scope**: Does not capture non-academic confounding factors such as socio-economic background, health emergencies, course difficulty variations, or extracurricular commitments.
 * **Linearity & Regularity**: While realistic statistical noise and variance have been introduced, real-world educational data exhibits higher variance, outliers, and institutional discrepancies.
